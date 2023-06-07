@@ -1,0 +1,34 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3641/3641754.png');
+  background-size: cover;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &-matContent {
+    &-div {
+      margin-top: 2% !important;
+
+      form {
+        display: grid !important;
+        gap: 5px;
+      }
+    }
+  }
+}
+
+.container-matContent-div-button {
+  display: flex;
+
+  button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+<div class="container">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Formulario de ingreso</mat-card-title>
+      <mat-card-subtitle>Ingrese todos los datos</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="container-matContent">
+      <div class="container-matContent-div">
+        <form [formGroup]="myForm" (ngSubmit)="saveForm()">
+          <mat-form-field>
+            <mat-label>Ingresa tu email</mat-label>
+            <input matInput placeholder="pat@example.com" formControlName="email" required>
+            <mat-error *ngIf="myForm.get('email').invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Ingresa tu contraseña</mat-label>
+            <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <div class="container-matContent-div-button">
+            <button mat-raised-button color="primary" type="submit">Entrar</button>
+          </div>
+        </form>
+      </div>
+    </mat-card-content>
+
+  </mat-card>
+</div>

@@ -1,0 +1,10 @@
+<app-toolbar></app-toolbar>
+<div class="container-tabs">
+  <mat-tab-group [(selectedIndex)]="activeTab">
+    <mat-tab label="Detalle de entrega"> <app-delivery-list></app-delivery-list> </mat-tab>
+    <mat-tab label="Lista de entregas"> <app-delivery-details></app-delivery-details> </mat-tab>
+    <mat-tab label="Evidencia de entregas"> <app-pod-upload></app-pod-upload> </mat-tab>
+  </mat-tab-group>
+
+</div>
+<router-outlet></router-outlet>
